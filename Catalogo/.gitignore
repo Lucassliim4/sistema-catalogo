@@ -1,0 +1,10 @@
+vendor/
+node_modules/
+.env
+storage/uploads/capas/*
+!storage/uploads/capas/.gitkeep
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
