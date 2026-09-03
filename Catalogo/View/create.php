@@ -53,7 +53,6 @@ $notaPost   = $_POST["nota"] ?? "";
 <a href="catalog.php" class="btn btn-contorno btn-sm mb-3"><i class="bi bi-arrow-left me-1"></i>Voltar</a>
 <div class="form-catalogo">
 <h1 class="h4 fw-bold mb-1">Cadastrar novo item</h1>
-<p class="text-muted small mb-4">Preencha os dados e envie via <strong>POST</strong> para salvar no MySQL com PDO.</p>
 <?php if($mensagemErro): ?><div class="alerta toast-erro border mb-3"><?= esc($mensagemErro) ?></div><?php endif; ?>
 <form method="POST" action="create.php" enctype="multipart/form-data" novalidate>
 <input type="hidden" name="token_csrf" value="<?= esc($tokenCsrf) ?>">
@@ -64,7 +63,7 @@ $notaPost   = $_POST["nota"] ?? "";
 <div class="col-md-3"><label for="nota" class="form-label">Nota (0–10) *</label><input type="number" name="nota" id="nota" class="form-control" required min="0" max="10" step="0.1" value="<?= esc($notaPost) ?>" placeholder="8.5"></div>
 </div>
 <div class="mb-3"><label for="descricao" class="form-label">Descrição *</label><textarea name="descricao" id="descricao" class="form-control" rows="4" required placeholder="Conte um pouco sobre o item..."><?= esc($descPost) ?></textarea></div>
-<div class="mb-4"><label for="imagem" class="form-label">Capa / Imagem (opcional — JPG, PNG ou WEBP até 5MB)</label><input type="file" name="imagem" id="imagem" class="form-control" accept="image/jpeg,image/png,image/webp"></div>
+<div class="mb-4"><label for="imagem" class="form-label">Imagem (opcional — JPG, PNG ou WEBP até 5MB)</label><input type="file" name="imagem" id="imagem" class="form-control" accept="image/jpeg,image/png,image/webp"></div>
 <div class="d-flex gap-2"><button type="submit" class="btn btn-primario px-4">Salvar item</button><a href="catalog.php" class="btn btn-contorno">Cancelar</a></div>
 </form>
 </div>
