@@ -163,10 +163,8 @@ git push -u origin main
 Uso acadêmico.
 
 ## Banco de Dados 
--- ============================================
 --  CATÁLOGO DE LIVROS, FILMES E JOGOS
 --  Banco: catalogo
--- ============================================
 
 CREATE DATABASE IF NOT EXISTS catalogo
     CHARACTER SET utf8mb4
@@ -174,9 +172,7 @@ CREATE DATABASE IF NOT EXISTS catalogo
 
 USE catalogo;
 
--- --------------------------------------------
 -- Tabela: usuarios
--- --------------------------------------------
 CREATE TABLE IF NOT EXISTS usuarios (
     id         INT AUTO_INCREMENT PRIMARY KEY,
     nome       VARCHAR(120) NOT NULL,
@@ -185,9 +181,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
     criado_em  DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------
 -- Tabela: itens (livros, filmes, jogos)
--- --------------------------------------------
 CREATE TABLE IF NOT EXISTS itens (
     id          INT AUTO_INCREMENT PRIMARY KEY,
     usuario_id  INT NOT NULL,
@@ -208,10 +202,9 @@ CREATE TABLE IF NOT EXISTS itens (
     INDEX idx_criado (criado_em)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------
 -- Dados de exemplo (senhas: 123456)
 -- hash gerado com password_hash('123456', PASSWORD_DEFAULT)
--- --------------------------------------------
+
 INSERT INTO usuarios (nome, email, senha) VALUES
 ('Ana Silva',  'ana@email.com',  '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'),
 ('Lucas Souza','lucas@email.com','$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi')
