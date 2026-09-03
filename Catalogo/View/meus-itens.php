@@ -46,7 +46,7 @@ $tokenCsrf = $usuarioController->gerarTokenCsrf();
 </div></nav>
 <main class="container py-4">
 <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
-<div><h1 class="h4 fw-bold mb-1">Olá, <?= esc($nome) ?>! 👋</h1><p class="text-muted small mb-0">Gerencie seus itens cadastrados. Você só pode editar e excluir o que é seu.</p></div>
+<div><h1 class="h4 fw-bold mb-1">Olá, <?= esc($nome) ?>! </h1><p class="text-muted small mb-0">Gerencie seus itens cadastrados. Você só pode editar e excluir o que é seu.</p></div>
 <a href="create.php" class="btn btn-primario"><i class="bi bi-plus-lg me-1"></i> Novo item</a>
 </div>
 <?php if($msg): ?><div class="alerta toast-sucesso border mb-3"><?= esc($msg) ?></div><?php endif; ?>
@@ -56,7 +56,7 @@ $tokenCsrf = $usuarioController->gerarTokenCsrf();
 <span class="text-muted small align-self-center"><?= count($meusItens) ?> itens cadastrados por você</span>
 </div>
 <?php if(empty($meusItens)): ?>
-<div class="info-box text-center py-5"><div class="fs-1 mb-2">📦</div><p class="text-muted mb-3">Você ainda não cadastrou nenhum item.</p><a href="create.php" class="btn btn-primario">Cadastrar meu primeiro item</a></div>
+<div class="info-box text-center py-5"><div class="fs-1 mb-2"></div><p class="text-muted mb-3">Você ainda não cadastrou nenhum item.</p><a href="create.php" class="btn btn-primario">Cadastrar meu primeiro item</a></div>
 <?php else: ?>
 <div class="row g-3">
 <?php foreach($meusItens as $item): ?>
